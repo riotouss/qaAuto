@@ -1,0 +1,5 @@
+SELECT * FROM `user_profiles` WHERE name LIKE '%am%';
+SELECT MAX(totalCost) FROM expenses
+SELECT COUNT(car_models.title) AS count_models, car_brands.id AS car_id FROM car_brands JOIN car_models ON car_brands.id = car_models.carBrandId WHERE car_brands.title IN ('AUDI', 'BMW') GROUP BY car_brands.id
+SELECT car_models.title AS car_model, car_brands.title AS car_brand, COUNT(DISTINCT cars.UserID) AS user_count FROM cars JOIN car_brands ON cars.CarBrandID = car_brands.id JOIN car_models ON cars.CarModelID = car_models.id GROUP BY car_models.title, car_brands.title
+SELECT DISTINCT user_profiles.name FROM cars JOIN user_profiles ON cars.userID = user_profiles.userID
